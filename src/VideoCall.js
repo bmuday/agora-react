@@ -67,7 +67,7 @@ const VideoCall = ({ setInCall }) => {
     <Grid container direction="column" style={{ height: "100%" }}>
       <Grid item style={{ height: "5%" }}>
         {ready && tracks && (
-          <Controls tracks={tracks} setStart={start} setInCall={setInCall} />
+          <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
         )}
       </Grid>
       <Grid item style={{ height: "95%" }}>

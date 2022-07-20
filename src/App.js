@@ -5,15 +5,18 @@ import VideoCall from "./VideoCall";
 const App = () => {
   const [inCall, setInCall] = useState(false);
   return (
-    <div className="app">
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => setInCall(true)}
-      >
-        Join Call
-      </Button>
-      {inCall ? <VideoCall setInCall={setInCall} /> : "Waiting to join call!"}
+    <div className="app" style={{ height: "100%" }}>
+      {inCall ? (
+        <VideoCall setInCall={setInCall} />
+      ) : (
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setInCall(true)}
+        >
+          Join Call
+        </Button>
+      )}
     </div>
   );
 };
